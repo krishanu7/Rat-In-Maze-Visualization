@@ -27,7 +27,7 @@ const legendData = [
 const Legend = () => {
     return (
         <details open>
-            <summary>Legend</summary>
+            <summary>Informations</summary>
             <div className='legend'>
                 {
                     legendData.map((id, i) => (
