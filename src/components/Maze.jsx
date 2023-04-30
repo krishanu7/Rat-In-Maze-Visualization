@@ -3,7 +3,6 @@ import Cell from './Cell';
 
 const Maze = (props) => {
   const { maze, mazeSize, updateMaze } = props;
-
   return (
     <div className="maze">
       {maze.map((row, rowNum) => (
@@ -11,17 +10,16 @@ const Maze = (props) => {
           {row.map((cell, cellNum) => (
             <Cell
               key={`${rowNum}${cellNum}`}
-              maze={maze}
-              setMaze={updateMaze}
+              state={maze[rowNum][cellNum]}
               y={rowNum}
               x={cellNum}
               mazeSize={mazeSize}
+              updateMaze={updateMaze}
             />
           ))}
         </div>
       ))}
     </div>
   );
-};
-
+}
 export default Maze;
