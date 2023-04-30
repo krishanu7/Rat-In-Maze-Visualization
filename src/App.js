@@ -1,10 +1,17 @@
-import React from 'react'
-
+import React , {useState} from 'react'
+import Maze from './components/Maze';
 const App = () => {
+  const [maze, updateMaze] = useState([
+		[0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0],
+	]);
   return (
-    <div>
-      App
-    </div>
+    <>
+      <Maze mazeSize={5} maze={maze} updateMaze={updateMaze} />
+    </>
   )
 }
 
